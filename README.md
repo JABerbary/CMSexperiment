@@ -1,6 +1,4 @@
-"# CMSexperiment" 
-
-Simulador de Gerenciamento de conteúdo em PHP + PDO
+<b><h3>Simulador de Gerenciamento de conteúdo em PHP + PDO</b></h3>
 
 Requisitos para funcionalidade:
 
