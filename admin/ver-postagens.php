@@ -120,7 +120,8 @@ try{
                       <td><?php  echo $contagem++;?></td>
                     <td> <?php echo $mostrar->titulo;?> </td>
                     <td> <?php echo $mostrar->data;?> </td>
-                    <td><img src="<?php echo $mostrar->imagem;?>" width="50px"></td>
+                    <!-- <td><img src="<?php echo $mostrar->imagem;?>" width="50px"></td>  -->
+                    <td><img src="\chris\<?php echo $mostrar->imagem;?>" width="50px"></td>
                     <td><?php echo $mostrar->pagina_nome;?></td>
                     <td> <?php echo $mostrar->exibir;?> </td>
                     <td> <?php echo limitarTexto($mostrar->descricao,$limite =100)?> </td>

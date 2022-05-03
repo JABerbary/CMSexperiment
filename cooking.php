@@ -8,7 +8,7 @@ require_once("admin/limita-texto.php");
 
 			<div class="container" >
 				<div class="row" style= "margin-bottom:0%">
-					<a href="#" id="pull" ><img src="images/layercooking.png" title="menu" id="Dsppear" style="width: 30%;margin-left: 30%;margin-bottom: 10%;"    }/></a>
+					<a href="#" id="pull" ><img src="images/layercooking.png" title="menu" id="Dsppear" style="width: 30%;margin-left: 40%;margin-bottom: 10%;"}/></a>
 					<!--<form id="custom-search-form" class="form-search form-horizontal pull-right"  >
 						<input type="text" class="search-query" placeholder="Pesquise por algo" style= "margin-top:6%">
 						<button type="submit" class="btn"><i class="fa fa-search"></i></button>
@@ -23,7 +23,7 @@ require_once("admin/limita-texto.php");
 
 					echo '<script language= "JavaScript">
 									location.href="cooking.php";
-						</script>';
+						 </script>';
 				}
 
 				}
@@ -46,9 +46,8 @@ require_once("admin/limita-texto.php");
 					<div class="panel-body panel panel-default">
 
 							<div class="col-sm-5">
-								<a >
-									<img src="<?php echo $exibe-> imagem;?>" style="width: 100%;"></img>
-								</a>
+									<img src="\chris\<?php echo $exibe-> imagem;?>"style="width: 100%;"/>
+								
 							</div>
 							<h3 ><b style="color: black;"> <?php echo $exibe->titulo;?></b></h3>
 							<div class="col-sm-7">
@@ -154,33 +153,6 @@ require_once("admin/limita-texto.php");
 
 
 
-	<script src="js/jquery.min.js">
-	</script>
-
-	<script type="text/javascript">
-	$(function(){
-		$("#menu a").click(function( e ){
-			e.preventDefault();
-			var href = $( this ).attr('href');
-			$("#conteudocentral").load( href +" #conteudocentral");
-		});
-
-		var pull 		= $('#pull');
-		menu 		= $('nav ul');
-		menuHeight	= menu.height();
-		$(pull).on('click', function(e) {
-			e.preventDefault();
-			menu.slideToggle();
-		});
-		$(window).resize(function(){
-			var w = $(window).width();
-			if(w > 320 && menu.is(':hidden')) {
-				menu.removeAttr('style');
-			}
-		});
-	});
-
-	</script>
 	<script>
 	$(function() {
 		var pull 		= $('#pull');

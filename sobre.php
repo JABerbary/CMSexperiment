@@ -30,11 +30,11 @@ require_once("admin/limita-texto.php");
 
 								<p><?php echo limitarTexto($exibe->descricao,$limite=500);?>
 								</p>
-								<h3><b style="font-size: 60%;margin-left: -1%"> <i><a href="#">   < VOLTAR </a></i></b></h3>
+								<h3><b style="font-size: 60%;margin-left: -1%"> <i><a href="#">   < Go back </a></i></b></h3>
 							</div>
 
 							<div class="col-sm-6">
-								<a hrefim="#" id="Dsppear"><img src="<?php echo $exibe-> imagem;?>" style="width: 60%;"></img></a>
+								<a hrefim="#" id="Dsppear"><img src="\chris\<?php echo $exibe-> imagem;?>" style="width: 60%;"></img></a>
 
 							</div>
 						</div>

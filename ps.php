@@ -56,11 +56,10 @@ try{
 						while($exibe = $resultado-> fetch(PDO::FETCH_OBJ))
 						{
 							?>
-							<div class="panel-default  panel ">
-                               <div  class="panel-body">
+							<div class="panel-body panel panel-default ">
 									<div class="col-rm-6">
 										<a>
-											<img src="<?php echo $exibe->imagem; ?>" style="width: 100%; margin-bottom: 5%;"/>
+											<img src="\chris\<?php echo $exibe->imagem; ?>" style="width: 100%; margin-bottom: 5%;"/>
 										</a>
 									</div>
 									<h3>
@@ -68,14 +67,14 @@ try{
 											<?php echo $exibe->titulo;?>
 										</b>
 									</h3>
-									<div class="col-rm-6" style="margin: 3%;">
+									<div class="col-rm-6" style="margin: 3%;font-size: 30px">
 										<p >
 											<?php echo ($exibe->descricao);?>
 										</p>
 
 										<h3><b style="font-size: 60%;margin-left: 13%"> <i><a href="javascript:history.back()"> VOLTAR  <a href="#" style="margin-left: 65%">  <?php echo $exibe->data;?> </a>  </a></i></b></h3>
 									</div>
-								</div>
+								
                              </div>
 
 							<?php

@@ -89,8 +89,10 @@ nav {
 }
 nav ul {
 	padding: 0;
+	margin: auto;
 }
 nav li {
+	width: 180px;
 	display: inline;
 	float: left;
 	position:relative;
@@ -745,8 +747,9 @@ margin-left: 25%;
  }
  nav {
    top: 390px;
+   
    /*left:213px;*/
-   margin-left: 19%;
+   margin-left: 17%;
  }
  .about-left p {
 	font-size:3em;

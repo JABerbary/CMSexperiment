@@ -10,7 +10,7 @@ require_once("admin/limita-texto.php");
 
 		<div class="container" >
 			<div class="row" style= "margin-bottom:10%">
-				<a  id="pull" ><img src="images/layerpoosh.png" title="menu" id="Dsppear" style="width: 23%;margin-left: 35% ; margin-bottom: 10%"  }/></a>
+				<a href="#" id="pull" ><img src="images/layerfashion.png" title="menu" id="Dsppear" style="width: 30%;margin-left: 40% ; margin-bottom: 10%"  }/></a>
 				<!-- <form id="custom-search-form" class="form-search form-horizontal pull-right"  >
 				<input type="text" class="search-query" placeholder="Pesquise por algo" style= "margin-top:6%">
 				<button type="submit" class="btn"><i class="fa fa-search"></i></button>
@@ -23,7 +23,7 @@ require_once("admin/limita-texto.php");
 			if(!is_numeric($pg)){
 
 				echo '<script language= "JavaScript">
-								location.href="plife.php";
+								location.href="fashion.php";
 					</script>';
 			}
 
@@ -32,7 +32,7 @@ require_once("admin/limita-texto.php");
 
 			$quantidade = 3;
 			$inicio = ($pg*$quantidade) - $quantidade;
-			$sql ="SELECT * FROM tb_postagens WHERE exibir='1' AND pagina_id = '4' ORDER BY id DESC LIMIT $inicio, $quantidade";
+			$sql ="SELECT * FROM tb_postagens WHERE exibir='1' AND pagina_id = '5' ORDER BY id DESC LIMIT $inicio, $quantidade";
 
 			try{
 				$resultado = $conexao -> prepare($sql);
@@ -43,12 +43,12 @@ require_once("admin/limita-texto.php");
 					while($exibe = $resultado-> fetch(PDO::FETCH_OBJ))
 					{
 						?>
+                        <div>
+						<div class="panel-body panel panel-default">
 
-						<div >
-							<div class="panel-body panel panel-default">
 								<div class="col-sm-5">
 									<a >
-										<img src="<?php echo $exibe-> imagem;?>" style="width: 100%;"></img>
+										<img src="\chris\<?php echo $exibe-> imagem;?>" style="width: 100%;"></img>
 									</a>
 								</div>
 								<h3 ><b style="color: black;"><?php echo $exibe->titulo;?></b></h3>
@@ -61,8 +61,6 @@ require_once("admin/limita-texto.php");
 								</div>
 							</div>
 						</div>
-
-
 						<?php
 					}
 				}
@@ -74,9 +72,9 @@ require_once("admin/limita-texto.php");
 				echo $erro->getMessage();
 			}
 			?>
-            </div>
-            </div>
-            </div>
+		</div>
+	 </div>
+	 </div>
 			<style>
 			/* paginacao */
 
@@ -94,7 +92,7 @@ require_once("admin/limita-texto.php");
 
 			</style>
 			<?php
-			$sql = "SELECT * from tb_postagens WHERE exibir='1' AND pagina_id = '4'";
+			$sql = "SELECT * from tb_postagens WHERE exibir='1' AND pagina_id = '5'";
 			try{
 				$result = $conexao -> prepare($sql);
 				$result -> execute();
@@ -106,7 +104,7 @@ require_once("admin/limita-texto.php");
 			if($totalRegistros <= $quantidade){}
 			else{
 			$paginas = ceil($totalRegistros/$quantidade);
-			if($pg>$paginas){echo '<script language= "JavaScript">location.href="plife.php";</script>';}
+			if($pg>$paginas){echo '<script language= "JavaScript">location.href="fashion.php";</script>';}
 			$links =5;//responsavel pelo numeord e exibição dos botões
 
 			if(isset($i)){}
@@ -114,7 +112,7 @@ require_once("admin/limita-texto.php");
 			?>
 			<div class="paginas">
 
-				<a href="index.php?acao=plife&pg">Primeira Página</a>
+				<a href="index.php?acao=fashion&pg">Primeira Página</a>
 
 				<?php
 					if(isset($_GET['pg'])){
@@ -126,7 +124,7 @@ require_once("admin/limita-texto.php");
 						else{
 				?>
 
-				<a href="index.php?acao=plife&pg=<?php echo $i;?>"  class="ativo<?php echo $i;?>"><?php echo $i;?></a>
+				<a href="index.php?acao=fashion&pg=<?php echo $i;?>"  class="ativo<?php echo $i;?>"><?php echo $i;?></a>
 
 
 			<?php  }} ?>
@@ -141,7 +139,7 @@ require_once("admin/limita-texto.php");
 					else{
 			?>
 
-				<a href="index.php?acao=plife&pg=<?php echo $i;?>" class="ativo"><?php echo $i;?></a>
+				<a href="index.php?acao=fashion&pg=<?php echo $i;?>" class="ativo"><?php echo $i;?></a>
 
 			<?php
 					}
@@ -154,7 +152,6 @@ require_once("admin/limita-texto.php");
 
 			</div><!-- paginas -->
 		<?php  } ?>
-
 
 <script>
 $(function() {
@@ -174,7 +171,17 @@ $(function() {
 });
 
 </script>
-
+<!--<script type="text/javascript">
+$(document).ready(function(){
+	$("#menu a").click(function( e ){
+		e.preventDefault();
+		var href = $( this ).attr('href');
+		$("#conteudocentral").load( href +" #conteudocentral");
+	});
+});
+</script>
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>-->
 
 <script type="text/javascript" src="resources/js/jquery/jquery-1.10.2.min.js"</script>
 </body>
