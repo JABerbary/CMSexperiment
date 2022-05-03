@@ -8,7 +8,7 @@ require_once("admin/limita-texto.php");
 			<div class="container">
 				<div class="row" style= "margin-bottom:10%">
 					<a href="#" id="pull" >
-						<img src="images/layermusic.png" title="menu" id="Dsppear" style="width: 30%;margin-left: 30%" />
+						<img src="images/layermusic.png" title="menu" id="Dsppear" style="width: 30%;margin-left: 40%" />
 					</a>
 
 					</form>
@@ -48,7 +48,7 @@ require_once("admin/limita-texto.php");
 								<div class="panel-body panel panel-default">
 									<div class="col-sm-5">
 										<a >
-											<img src="<?php echo $exibe-> imagem;?>" style="width: 100%; margin-bottom: 2%;"/>
+											<img src="\chris\<?php echo $exibe-> imagem;?>" style="width: 100%; margin-bottom: 2%;"/>
 										</a>
 									</div>
 									<h3 >
